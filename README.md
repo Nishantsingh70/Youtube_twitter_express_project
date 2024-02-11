@@ -24,7 +24,7 @@ The backend model of this project is available on the link[here]
 - user controller
 - video controller
 
-## Here is the list of all sub-controller for above controllers
+## Here is the list of all functions for above controllers
 
 - **Comment controller**
 
