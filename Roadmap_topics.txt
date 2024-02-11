@@ -1,0 +1,19 @@
+Files:
+
+* index file => DB Connect
+* App => configuration, cookies
+* constants => enums, DB-name
+
+Directory:
+
+* DB folder => Write that code which will connect to DB.
+* Models folder => Write schema for data.
+* Controllers folder => Write functionality in this folder.
+* Routes folder => for routing 
+* Middlewares folder =>
+* Utils folder => Suppose we use any code again and again then we put it in this folder like mail code.
+* More (depends) => 
+
+
+
+

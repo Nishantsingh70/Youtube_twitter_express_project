@@ -1,0 +1,50 @@
+Note1:  How to check that particular value exists in table or not in mongoDB pipeline.       
+        
+        const allLikedVideos = await Like.aggregate([
+            {
+                $match: {
+                    video: {
+                        $exists: true
+                    }
+                }
+            },
+        ])
+
+Note2: How to project null value as 0 in like count example.
+
+    {
+    $addFields: {
+        likes: {
+            $cond: {
+                if: { $eq: [{ $size: "$likes" }, 0] }, // Check if likes array is empty
+                then: 0, // If empty, project 0
+                else: { $first: "$likes.totalLikes" } // Otherwise, project the total likes count
+            }
+        },
+    }
+    },
+
+Note3: How to optimize the operations 
+       example 1: if video is already existing in playlist so we should ignore the update operation.
+       example 2: if video is not there in playlist so we don't need to perform update operation in that. 
+
+       // Array of ObjectId values to check against
+       const objectIdValues = [
+            new ObjectId('65c3662dfd6a3e8c9d7fb78c'),
+            new ObjectId('65c366edfd6a3e8c9d7fb78f'),
+            new ObjectId('65c6210cd312deeb6cff3ce5')
+        ];
+
+        // Value to search for
+        const valueToCheck = new ObjectId('YOUR_OBJECT_ID_HERE');
+
+        // Flag to track if the value exists
+        let valueExists = false;
+
+        // Loop through the array to check for the value
+        for (let objectId of objectIdValues) {
+            if (objectId.equals(valueToCheck)) {
+                valueExists = true;
+                break; // No need to continue once found
+            }
+        }
