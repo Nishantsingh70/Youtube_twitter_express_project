@@ -99,4 +99,4 @@ https://github.com/Nishantsingh70/Youtube_twitter_express_project
 
 In this backend project, I used nodejs, expressjs, mongodb, Jwt, bcrypt and many more.
 
-In the last, I want to thanks Hitesh Chaudhary sir and his content available on chai aur code youtube channel. Without his guidance, I can't complete this project.
+In conclusion, I would like to express my sincere gratitude to **Hitesh Chaudhary** sir and his valuable content on the **Chai aur Code** YouTube channel. It is with his invaluable guidance that I was able to successfully complete this project.
